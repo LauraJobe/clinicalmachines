@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ATU Clinical and Simulation Machine Practice</title>
+<meta name="description" content="Practice the IV pumps and medication cabinets used on the unit before clinical.">
+<meta name="apple-mobile-web-app-title" content="ATU Machine Practice">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a short masthead, then one row of station cards (stacks on phones), then a quiet footer. */
+:root {
+  --bg: #f3f5f1; --panel: #ffffff; --ink: #1a2a22; --muted: #55655c; --line: #d3dbd4;
+  --green: #1d5c3c; --green-ink: #ffffff; --gold: #c99a2e; --gold-soft: #f6ecd2;
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111914; --panel: #18231c; --ink: #e4ece6; --muted: #9fb0a5; --line: #2c3a31;
+  --green: #4fa877; --green-ink: #0c1510; --gold: #e0b653; --gold-soft: #2c2716; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #111914; --panel: #18231c; --ink: #e4ece6; --muted: #9fb0a5; --line: #2c3a31;
+  --green: #4fa877; --green-ink: #0c1510; --gold: #e0b653; --gold-soft: #2c2716; color-scheme: dark; }
+
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.0625rem/1.55 var(--body);
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.wrap { max-width: 64rem; margin: 0 auto; padding-inline: 1.25rem; padding-block: 2.5rem 2rem; display: grid; gap: 2.25rem; }
+
+header { display: grid; gap: .6rem; border-bottom: 3px solid var(--gold); padding-bottom: 1.5rem; }
+.eyebrow { font: 500 .75rem/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--green); }
+h1 { margin: 0; font: 700 clamp(2rem, 5vw, 3rem)/1.05 var(--display); text-wrap: balance; }
+.lede { margin: 0; max-width: 38rem; color: var(--muted); }
+
+.stations { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.25rem; }
+.station { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 1.5rem; display: grid; gap: 1rem; grid-template-rows: auto auto 1fr auto; min-width: 0; }
+.station h2 { margin: 0; font: 600 1.6rem/1.15 var(--display); }
+.kind { display: flex; align-items: center; gap: .6rem; }
+.kind svg { width: 44px; height: 44px; flex: none; }
+.kind span { font: 500 .72rem/1.2 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: .35rem .9rem; font-size: .95rem; align-content: start; }
+dt { font-weight: 700; color: var(--muted); }
+dd { margin: 0; min-width: 0; }
+.open { display: inline-flex; justify-content: center; align-items: center; gap: .5rem; padding: .8rem 1.1rem; border-radius: 8px; background: var(--green); color: var(--green-ink); font-weight: 700; text-decoration: none; }
+.open:hover { filter: brightness(1.08); }
+.open:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.tips { background: var(--gold-soft); border-radius: 10px; padding: 1.25rem 1.5rem; display: grid; gap: .5rem; }
+.tips h3 { margin: 0; font: 600 1.15rem/1.2 var(--display); }
+.tips ul { margin: 0; padding-left: 1.2rem; display: grid; gap: .35rem; }
+
+footer { font-size: .85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 1.25rem; max-width: 46rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Arkansas Tech University · Nursing</div>
+    <h1>ATU Clinical and Simulation Machine Practice</h1>
+    <p class="lede">Practice the equipment you will use on the unit before clinical and simulation. Choose a station, pick your clinical facility, and work through practice orders at your own pace.</p>
+  </header>
+
+  <main class="stations">
+    <section class="station" aria-labelledby="iv-title">
+      <div class="kind">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="4" y="6" width="36" height="32" rx="5" fill="var(--green)"/><rect x="9" y="11" width="26" height="11" rx="2" fill="var(--panel)"/><text x="22" y="19.5" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7" fill="var(--green)">125 mL/h</text><circle cx="14" cy="30" r="3" fill="var(--gold)"/><circle cx="22" cy="30" r="3" fill="var(--panel)"/><circle cx="30" cy="30" r="3" fill="var(--panel)"/></svg>
+        <span>Station 1 · Infusion</span>
+      </div>
+      <h2 id="iv-title">IV Pump Practice Lab</h2>
+      <dl>
+        <dt>Practice</dt><dd>Primary and secondary infusions, weight-based drips, titrations, soft and hard limits</dd>
+        <dt>Pumps</dt><dd>Modular, single-channel, dual-line cassette, compact arrow-key, and pediatric syringe pumps</dd>
+        <dt>Start</dt><dd>Select your clinical facility to get the pump used there</dd>
+      </dl>
+      <a class="open" href="https://laurajobe.github.io/IV-INFUSION-PUMPS/" target="_blank" rel="noopener">Open the IV pumps <span aria-hidden="true">→</span></a>
+    </section>
+
+    <section class="station" aria-labelledby="med-title">
+      <div class="kind">
+        <svg viewBox="0 0 44 44" aria-hidden="true"><rect x="6" y="4" width="32" height="36" rx="4" fill="var(--green)"/><rect x="10" y="8" width="24" height="9" rx="1.5" fill="var(--panel)"/><rect x="10" y="20" width="11" height="6" rx="1" fill="var(--gold)"/><rect x="23" y="20" width="11" height="6" rx="1" fill="var(--panel)"/><rect x="10" y="29" width="11" height="6" rx="1" fill="var(--panel)"/><rect x="23" y="29" width="11" height="6" rx="1" fill="var(--panel)"/></svg>
+        <span>Station 2 · Medication room</span>
+      </div>
+      <h2 id="med-title">MedStation Practice</h2>
+      <dl>
+        <dt>Practice</dt><dd>Sign in, remove medications for a patient, waste with a witness, returns and count discrepancies</dd>
+        <dt>Cabinets</dt><dd>Pyxis-style and Omnicell-style automated dispensing cabinets</dd>
+        <dt>Start</dt><dd>User ID <b>student</b>, then hold the fingerprint scanner</dd>
+      </dl>
+      <a class="open" href="https://laurajobe.github.io/Medication-Machine/" target="_blank" rel="noopener">Open the med cabinet <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <aside class="tips" aria-label="Tips for phones and tablets">
+    <h3>Using a phone or iPad</h3>
+    <ul>
+      <li>Each station works in the browser on computers, tablets and phones. No account or download is needed.</li>
+      <li>Save this page to your home screen: on iPad or iPhone tap Share, then <b>Add to Home Screen</b>.</li>
+      <li>Turn the volume up: the pumps beep like the real ones.</li>
+    </ul>
+  </aside>
+
+  <footer>
+    For education only. These simulators are modeled on the general workflow of hospital equipment. They are not the manufacturers' software and are not affiliated with or endorsed by any manufacturer. All patients and orders are fictional. Never enter real patient information.
+  </footer>
+</div>
+</body>
+</html>
